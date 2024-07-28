@@ -27,7 +27,7 @@ const initializeDBAndServer = async () => {
 
 initializeDBAndServer();
 
-//get transactions
+///get transactions
 app.get("/transactions/", async (request, response) => {
     const gettransactionsQuery = `
       SELECT
