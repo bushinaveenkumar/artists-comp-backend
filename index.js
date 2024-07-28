@@ -29,7 +29,7 @@ initializeDBAndServer();
 
 ///get transactions
 app.get("/transactions/", async (request, response) => {
-    const gettransactionsQuery = `
+    const gettransactionsquery = `
       SELECT
         *
       FROM
