@@ -43,7 +43,7 @@ app.get("/transactions/", async (request, response) => {
     try {
       const {date,type,amount,description, runningBalance} = request.body
   
-      const addTransactionQuery = `
+      const addTransactionquery = `
       INSERT INTO 
         transactions (date,type,amount,description, running_balance)
       VALUES 
