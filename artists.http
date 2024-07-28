@@ -1,0 +1,27 @@
+###
+GET http://localhost:3000/transactions/
+###
+
+###
+POST http://localhost:3000/createtransaction/
+Content-Type:application/json
+
+{
+"date":"2024-01-11",   
+"type": "Debit",
+"amount": 5000,
+"description": "for books",
+"runningBalance": "5000"
+}
+
+###
+PUT http://localhost:3000/transactions/6/
+Content-Type:application/json
+
+{
+    "date": "2024-07-10",  
+    "type": "Credit BAl",
+    "amount": 10600,
+    "description": "to books",
+    "runningBalance": "21000"  
+}
