@@ -34,7 +34,7 @@ app.get("/transactions/", async (request, response) => {
         *
       FROM
         transactions;`;
-    const transactionsArray = await db.all(gettransactionsQuery);
+    const transactionsArray = await db.all(gettransactionsquery);
     response.send(transactionsArray);
   });
 
@@ -49,7 +49,7 @@ app.get("/transactions/", async (request, response) => {
       VALUES 
         ("${date}","${type}",${amount}, "${description}", ${runningBalance});`
   
-      db.run(addTransactionQuery)
+      db.run(addTransactionquery)
       response.send('Player Added to Team')
     } catch (e) {
       console.log(`${e.message}`)
