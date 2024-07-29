@@ -56,25 +56,4 @@ app.get("/transactions/", async (request, response) => {
     }
   })
 
-  //Update transaction
-app.put('/transactions/:transactionsId/', async (request, response) => {
-  const {transactionsId} = request.params
-  const transactionDetails = request.body
-
-  const {date,type,amount,description, runningBalance} = transactionDetails
-  console.log(type)
-  const updatePlayerQuery = `
-  UPDATE
-    transactions
-  SET
-    date="${date}"
-    type = "${type}",
-    amount = ${amount},
-    description = "${description}"
-    running_balance= "${runningBalance}"
-  WHERE
-    id = ${transactionsId};`
-
-  db.run(updatePlayerQuery)
-  response.send('Player Details Updated')
-})
+  
